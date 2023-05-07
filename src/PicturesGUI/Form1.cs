@@ -5,6 +5,7 @@ namespace PicturesGUI
 {
     public partial class Form1 : Form
     {
+
         public Form1()=> InitializeComponent();
 
         Bitmap _bitmap;
@@ -12,6 +13,7 @@ namespace PicturesGUI
         {
             Generator gen = new Generator(picture.Width, picture.Height);
             Random random = new Random();
+            //добавить возможность выбора
             if (random.Next(2) == 1)
             {
                 gen.SetAlg(new GradientBasedPicture());
