@@ -29,11 +29,17 @@
         private void InitializeComponent()
         {
             this.save = new System.Windows.Forms.Button();
-            this.generate = new System.Windows.Forms.Button();
+            this.clear_button = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.picture = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.сгенерироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuGradient = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuSquare = new System.Windows.Forms.ToolStripMenuItem();
+            this.Noise_Button = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // save
@@ -43,49 +49,90 @@
             this.save.Location = new System.Drawing.Point(294, 3);
             this.save.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(282, 113);
+            this.save.Size = new System.Drawing.Size(282, 83);
             this.save.TabIndex = 0;
             this.save.Text = "Сохранить";
             this.save.UseVisualStyleBackColor = true;
             this.save.Click += new System.EventHandler(this.save_Click);
             // 
-            // generate
+            // clear_button
             // 
-            this.generate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.generate.Location = new System.Drawing.Point(4, 3);
-            this.generate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.generate.Name = "generate";
-            this.generate.Size = new System.Drawing.Size(282, 113);
-            this.generate.TabIndex = 1;
-            this.generate.Text = "Сгенерировать";
-            this.generate.UseVisualStyleBackColor = true;
-            this.generate.Click += new System.EventHandler(this.generate_Click);
+            this.clear_button.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clear_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.clear_button.Location = new System.Drawing.Point(4, 3);
+            this.clear_button.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.clear_button.Name = "clear_button";
+            this.clear_button.Size = new System.Drawing.Size(282, 83);
+            this.clear_button.TabIndex = 1;
+            this.clear_button.Text = "Очистить";
+            this.clear_button.UseVisualStyleBackColor = true;
+            this.clear_button.Click += new System.EventHandler(this.clear_button_Click);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.generate, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.clear_button, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.save, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(-2, 369);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(-2, 399);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(580, 119);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(580, 89);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // picture
             // 
-            this.picture.Location = new System.Drawing.Point(1, 0);
+            this.picture.Location = new System.Drawing.Point(2, 27);
             this.picture.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(576, 366);
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picture.TabIndex = 3;
             this.picture.TabStop = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.сгенерироватьToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(576, 24);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // сгенерироватьToolStripMenuItem
+            // 
+            this.сгенерироватьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuGradient,
+            this.MenuSquare,
+            this.Noise_Button});
+            this.сгенерироватьToolStripMenuItem.Name = "сгенерироватьToolStripMenuItem";
+            this.сгенерироватьToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.сгенерироватьToolStripMenuItem.Text = "Сгенерировать";
+            // 
+            // MenuGradient
+            // 
+            this.MenuGradient.Name = "MenuGradient";
+            this.MenuGradient.Size = new System.Drawing.Size(180, 22);
+            this.MenuGradient.Text = "Градиент";
+            this.MenuGradient.Click += new System.EventHandler(this.MenuGradient_Click);
+            // 
+            // MenuSquare
+            // 
+            this.MenuSquare.Name = "MenuSquare";
+            this.MenuSquare.Size = new System.Drawing.Size(180, 22);
+            this.MenuSquare.Text = "Квадраты";
+            this.MenuSquare.Click += new System.EventHandler(this.MenuSquare_Click);
+            // 
+            // Noise_Button
+            // 
+            this.Noise_Button.Name = "Noise_Button";
+            this.Noise_Button.Size = new System.Drawing.Size(180, 22);
+            this.Noise_Button.Text = "Шум";
+            this.Noise_Button.Click += new System.EventHandler(this.Noise_Button_Click);
             // 
             // Form1
             // 
@@ -95,11 +142,15 @@
             this.ClientSize = new System.Drawing.Size(576, 486);
             this.Controls.Add(this.picture);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.Text = "генератор картинок";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,8 +159,13 @@
         #endregion
 
         private System.Windows.Forms.Button save;
-        private System.Windows.Forms.Button generate;
+        private System.Windows.Forms.Button clear_button;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox picture;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem сгенерироватьToolStripMenuItem;
+        private ToolStripMenuItem MenuGradient;
+        private ToolStripMenuItem MenuSquare;
+        private ToolStripMenuItem Noise_Button;
     }
 }

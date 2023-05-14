@@ -29,5 +29,6 @@ namespace ImageGenerationLib.Algs
             Color color = Color.FromArgb(r, g, b);
             return color;
         }
+
     }
 }
