@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\lib\ImageGenerationLib\ImageGenerationLib.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="ImageGenerationLib">
       <HintPath>..\..\lib\ImageGenerationLib\bin\Debug\net6.0\ImageGenerationLib.dll</HintPath>
     </Reference>

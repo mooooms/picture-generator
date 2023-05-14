@@ -1,6 +1,6 @@
 ﻿namespace PicturesGUI
 {
-    partial class Form1
+    partial class PictureGenerate
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -37,6 +37,7 @@
             this.MenuGradient = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuSquare = new System.Windows.Forms.ToolStripMenuItem();
             this.Noise_Button = new System.Windows.Forms.ToolStripMenuItem();
+            this.PictureSize = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -89,14 +90,15 @@
             this.picture.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(576, 366);
-            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picture.TabIndex = 3;
             this.picture.TabStop = false;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.сгенерироватьToolStripMenuItem});
+            this.сгенерироватьToolStripMenuItem,
+            this.PictureSize});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(576, 24);
@@ -116,25 +118,29 @@
             // MenuGradient
             // 
             this.MenuGradient.Name = "MenuGradient";
-            this.MenuGradient.Size = new System.Drawing.Size(180, 22);
+            this.MenuGradient.Size = new System.Drawing.Size(126, 22);
             this.MenuGradient.Text = "Градиент";
-            this.MenuGradient.Click += new System.EventHandler(this.MenuGradient_Click);
             // 
             // MenuSquare
             // 
             this.MenuSquare.Name = "MenuSquare";
-            this.MenuSquare.Size = new System.Drawing.Size(180, 22);
+            this.MenuSquare.Size = new System.Drawing.Size(126, 22);
             this.MenuSquare.Text = "Квадраты";
-            this.MenuSquare.Click += new System.EventHandler(this.MenuSquare_Click);
             // 
             // Noise_Button
             // 
             this.Noise_Button.Name = "Noise_Button";
-            this.Noise_Button.Size = new System.Drawing.Size(180, 22);
+            this.Noise_Button.Size = new System.Drawing.Size(126, 22);
             this.Noise_Button.Text = "Шум";
-            this.Noise_Button.Click += new System.EventHandler(this.Noise_Button_Click);
             // 
-            // Form1
+            // PictureSize
+            // 
+            this.PictureSize.Name = "PictureSize";
+            this.PictureSize.Size = new System.Drawing.Size(113, 20);
+            this.PictureSize.Text = "Размер картинки";
+            this.PictureSize.Click += new System.EventHandler(this.размерКартинкиToolStripMenuItem_Click);
+            // 
+            // PictureGenerate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,7 +151,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "Form1";
+            this.Name = "PictureGenerate";
             this.Text = "генератор картинок";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
@@ -167,5 +173,6 @@
         private ToolStripMenuItem MenuGradient;
         private ToolStripMenuItem MenuSquare;
         private ToolStripMenuItem Noise_Button;
+        private ToolStripMenuItem PictureSize;
     }
 }

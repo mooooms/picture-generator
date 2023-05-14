@@ -1,10 +1,8 @@
-﻿
-using ImageGenerationLib.Algs;
-using System.Drawing;
+﻿using System.Drawing;
 
-namespace ImageGenerationLib.algs
+namespace ImageGenerationLib.Algs
 {
-    internal class NoiseBasedPicture : IPicturesGenerationAlg
+    public class NoiseBasedPicture : IPicturesGenerationAlg
     {
         private int _length;
         private Bitmap _bitmap;
@@ -19,9 +17,9 @@ namespace ImageGenerationLib.algs
         {
             Random random = new Random();
 
-            for (int y = 0; y < _bitmap.Height; y += _length)
+            for (int y = 0; y < _bitmap.Height; y ++)
             {
-                for (int x = 0; x < _bitmap.Width; x += _length)
+                for (int x = 0; x < _bitmap.Width; x ++)
                 {
                     var color = Color.FromArgb(random.Next(225), random.Next(225), random.Next(225), random.Next(225));
                     _bitmap.SetPixel(x, y, color);
