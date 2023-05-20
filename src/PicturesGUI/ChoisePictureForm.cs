@@ -1,4 +1,6 @@
 ﻿
+using ImageGenerationLib.Algs;
+
 namespace PicturesGUI
 {
     public partial class ChoisePictureForm : Form
@@ -21,5 +23,18 @@ namespace PicturesGUI
                 alg_choise_obj.Length= (int)LengthFiguresPictureText.Value;
             }
         }
+ 
+        private void TypePictureText_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TypePictureText.Items.Count==1)
+            {
+                LengthFiguresPictureText.Visible = false;
+            }
+            else
+            {
+                LengthFiguresPictureText.Visible = true;
+            }
+        }
+      
     }
 }

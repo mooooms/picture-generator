@@ -25,8 +25,8 @@ namespace PicturesGUI
         }
         private void размерКартинкиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChoisePictureForm  cpf = new ChoisePictureForm();
-           
+            ChoisePictureForm cpf = new ChoisePictureForm();
+
             if (cpf.ShowDialog() == DialogResult.OK)
             {
                 var gen = cpf.alg_choise_obj;
@@ -51,4 +51,3 @@ namespace PicturesGUI
         }
     }
 }
-   

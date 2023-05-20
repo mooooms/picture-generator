@@ -33,10 +33,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.picture = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.сгенерироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuGradient = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuSquare = new System.Windows.Forms.ToolStripMenuItem();
-            this.Noise_Button = new System.Windows.Forms.ToolStripMenuItem();
             this.PictureSize = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
@@ -93,11 +89,11 @@
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picture.TabIndex = 3;
             this.picture.TabStop = false;
+         
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.сгенерироватьToolStripMenuItem,
             this.PictureSize});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -105,39 +101,11 @@
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // сгенерироватьToolStripMenuItem
-            // 
-            this.сгенерироватьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuGradient,
-            this.MenuSquare,
-            this.Noise_Button});
-            this.сгенерироватьToolStripMenuItem.Name = "сгенерироватьToolStripMenuItem";
-            this.сгенерироватьToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
-            this.сгенерироватьToolStripMenuItem.Text = "Сгенерировать";
-            // 
-            // MenuGradient
-            // 
-            this.MenuGradient.Name = "MenuGradient";
-            this.MenuGradient.Size = new System.Drawing.Size(126, 22);
-            this.MenuGradient.Text = "Градиент";
-            // 
-            // MenuSquare
-            // 
-            this.MenuSquare.Name = "MenuSquare";
-            this.MenuSquare.Size = new System.Drawing.Size(126, 22);
-            this.MenuSquare.Text = "Квадраты";
-            // 
-            // Noise_Button
-            // 
-            this.Noise_Button.Name = "Noise_Button";
-            this.Noise_Button.Size = new System.Drawing.Size(126, 22);
-            this.Noise_Button.Text = "Шум";
-            // 
             // PictureSize
             // 
             this.PictureSize.Name = "PictureSize";
-            this.PictureSize.Size = new System.Drawing.Size(113, 20);
-            this.PictureSize.Text = "Размер картинки";
+            this.PictureSize.Size = new System.Drawing.Size(110, 20);
+            this.PictureSize.Text = "Выбор картинки";
             this.PictureSize.Click += new System.EventHandler(this.размерКартинкиToolStripMenuItem_Click);
             // 
             // PictureGenerate
@@ -169,10 +137,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox picture;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem сгенерироватьToolStripMenuItem;
-        private ToolStripMenuItem MenuGradient;
-        private ToolStripMenuItem MenuSquare;
-        private ToolStripMenuItem Noise_Button;
         private ToolStripMenuItem PictureSize;
     }
 }
