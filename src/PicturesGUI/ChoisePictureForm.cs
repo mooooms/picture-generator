@@ -26,15 +26,16 @@ namespace PicturesGUI
  
         private void TypePictureText_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (TypePictureText.Items.Count==1)
+            if (TypePictureText.SelectedIndex==1)
             {
-                LengthFiguresPictureText.Visible = false;
+                LengthFiguresPictureText.Visible = true;
+                Lenght_Label.Visible = true;
             }
             else
             {
-                LengthFiguresPictureText.Visible = true;
+                LengthFiguresPictureText.Visible = false;
+                Lenght_Label.Visible = false;
             }
         }
-      
     }
 }

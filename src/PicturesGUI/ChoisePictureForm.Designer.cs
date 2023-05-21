@@ -37,7 +37,7 @@
             this.HeightPictureText = new System.Windows.Forms.NumericUpDown();
             this.WidthPictureText = new System.Windows.Forms.NumericUpDown();
             this.LengthFiguresPictureText = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Lenght_Label = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HeightPictureText)).BeginInit();
@@ -70,7 +70,7 @@
             this.tableLayoutPanel1.Controls.Add(this.HeightPictureText, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.WidthPictureText, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.LengthFiguresPictureText, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.Lenght_Label, 0, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(-3, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -87,7 +87,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 15);
+            this.label2.Size = new System.Drawing.Size(82, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Тип картинки";
             // 
@@ -190,14 +190,14 @@
             0,
             0});
             // 
-            // label4
+            // Lenght_Label
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 236);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 15);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Длина фигур";
+            this.Lenght_Label.AutoSize = true;
+            this.Lenght_Label.Location = new System.Drawing.Point(3, 236);
+            this.Lenght_Label.Name = "Lenght_Label";
+            this.Lenght_Label.Size = new System.Drawing.Size(79, 15);
+            this.Lenght_Label.TabIndex = 7;
+            this.Lenght_Label.Text = "Длина фигур";
             // 
             // panel1
             // 
@@ -233,7 +233,7 @@
         private Label label2;
         private Label label3;
         private Label label1;
-        private Label label4;
+        private Label Lenght_Label;
         private Panel panel1;
         private ComboBox TypePictureText;
         private NumericUpDown HeightPictureText;

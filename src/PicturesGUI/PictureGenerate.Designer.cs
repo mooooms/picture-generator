@@ -89,7 +89,6 @@
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picture.TabIndex = 3;
             this.picture.TabStop = false;
-         
             // 
             // menuStrip1
             // 
