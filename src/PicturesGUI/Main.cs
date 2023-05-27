@@ -8,6 +8,7 @@ namespace PicturesGUI
         private void Generate_Button_Click(object sender, EventArgs e)
         {
             PictureGenerate gpf = new PictureGenerate();
+            gpf.ShowDialog();
         }
         private void Processing_Button_Click(object sender, EventArgs e)
         {

@@ -16,29 +16,37 @@ namespace PicturesGUI
                 PhotoBox.SaveFile(saveFileDialog.FileName);
             }
         }
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
-            PhotoBox.Clear();
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter= "файлы изображений (*.jpg;*.bmp;*.png)|*.jpg;*.bmp;*.png";
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            Processing();
+        }
+        async void Processing()
+        {
+            await Task.Run(() =>
             {
-                Bitmap bitmap = new Bitmap(openFileDialog.FileName);
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "файлы изображений (*.jpg;*.bmp;*.png)|*.jpg;*.bmp;*.png";
                 string s = string.Empty;
-                for (int y = 0; y<bitmap.Height; y++)
+                string t = textBox1.Text;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    for (int x = 0; x < bitmap.Width; x++)
-                    {
-                        var px = bitmap.GetPixel(x, y);
-                        if (px.B < 200 && px.R < 200 && px.G < 200) s += "@";
-                        else s += " ";
+                    Bitmap bitmap = new Bitmap(openFileDialog.FileName);
 
+                    for (int y = 0; y < bitmap.Height; y++)
+                    {
+                        for (int x = 0; x < bitmap.Width; x++)
+                        {
+                            var px = bitmap.GetPixel(x, y);
+                            if (px.B < 200 && px.R < 200 && px.G < 200) s += t;
+                            else s += " ";
+
+                        }
+                        s += "\n";
                     }
-                    s += "\n";
+                    PhotoBox.Text = s;
                 }
-                PhotoBox.Text = s;
-            }
+            });
         }
     }
 }
