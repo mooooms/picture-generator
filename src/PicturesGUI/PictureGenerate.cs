@@ -34,7 +34,7 @@ namespace PicturesGUI
             }
         }
 
-        private void Generate(AlgChoiseObj gen)
+        private async void Generate(AlgChoiseObj gen)
         {
             Generator generator = new Generator(gen.Width, gen.Height);
             IPicturesGenerationAlg alg;
@@ -46,7 +46,7 @@ namespace PicturesGUI
                 default: return;
             }
             generator.SetAlg(alg);
-            _bitmap = generator.Generate(gen.Length);
+            _bitmap = await Task.Run(() => generator.Generate(gen.Length));
             picture.Image = _bitmap;
         }
     }

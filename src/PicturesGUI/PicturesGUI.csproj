@@ -14,7 +14,10 @@
 
   <ItemGroup>
     <Reference Include="ImageGenerationLib">
-      <HintPath>..\..\lib\ImageGenerationLib\bin\Debug\net6.0\ImageGenerationLib.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\picture-generator\lib\ImageGenerationLib\bin\Debug\net6.0\ImageGenerationLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessingLib">
+      <HintPath>..\..\lib\ImageProcessingLib\bin\Debug\net6.0\ImageProcessingLib.dll</HintPath>
     </Reference>
   </ItemGroup>
 
